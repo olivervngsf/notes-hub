@@ -1,4 +1,5 @@
 ---
+id: 4
 date: 2026-07-01
 category: personal
 priority: medium

@@ -18,7 +18,7 @@ Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statement
 
 ## Note format
 - One idea = one file: `notes/YYYY-MM-DD-slug.md`.
-- Frontmatter: `date`, `category`, `priority` (high/medium/low), `tags` (freeform list), `status`.
+- Frontmatter: `id` (sequential integer, see below), `date`, `category`, `priority` (high/medium/low), `tags` (freeform list), `status`.
 - Sections, always in this order: `Idea` → `Translation` → `Next Actions` → `Links`.
 - `Links` section is mandatory even if empty-looking — if the user mentions ANY URL, it goes here verbatim, with a short label. Never paraphrase a link away. This exists because links get lost is a recurring failure — don't repeat it.
 - `Next Actions` is skipped only when the idea is a pure reflection with nothing to do yet.
@@ -28,8 +28,13 @@ Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statement
 - `priority` is set from what the user says matters right now (explicit "I want to do X first/today"), not guessed from category. Re-set it whenever the user does a fresh brain dump and states what's important — don't leave stale priorities.
 - `tags` are the cross-cutting connective tissue — freeform, can span categories (e.g. `ai`, `career`, `crm`). Use tags, not category, to pull related ideas together, and to auto-check connections (Rule 4).
 
+## ID
+- Every note gets a short sequential integer `id` (1, 2, 3...) — the next unused number, read off the highest ID currently in `notes/master-list.md`.
+- The `id` is the quick-reference handle: the user can say "update ID 6" instead of the full title, and it's the first column in the master list.
+- Never reuse or renumber IDs, even if a note is later deleted or merged.
+
 ## Master list
-- Lives at `notes/master-list.md`. One row per captured idea: date, title, category, priority, tags, status, link to the note file.
+- Lives at `notes/master-list.md`. One row per captured idea: id, date, title, category, priority, tags, status, link to the note file.
 - Every note gets added automatically at capture time — no asking, no confirmation needed. This is a change from the earlier version of this rule (which required an explicit yes each time).
 - The master list is the recheck surface — it's what the user scans to see everything open, not the individual note files.
 - **Backlink**: every note gets a `**Master list:** [notes/master-list.md](master-list.md)` line directly under its title, added at the same time as the master list row. This makes travel bidirectional — master list → note (via the Note column) and note → master list (via this line).

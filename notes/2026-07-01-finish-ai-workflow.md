@@ -1,4 +1,5 @@
 ---
+id: 1
 date: 2026-07-01
 category: work
 priority: high

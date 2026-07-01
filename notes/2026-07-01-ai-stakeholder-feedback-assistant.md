@@ -1,7 +1,8 @@
 ---
+id: 7
 date: 2026-07-01
 category: work
-priority: medium
+priority: low
 tags: [ai, workflow, stakeholders]
 status: new
 ---
