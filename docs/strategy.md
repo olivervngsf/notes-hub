@@ -6,14 +6,22 @@ This is the layer underneath the notes. It defines *how* the capture system runs
 
 Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statements, missing connections, hard to turn into action. Without a system, processing an idea is inconsistent — different format, different quality, different result every time. With a system, it's consistent — same process, same format, predictable result every time. That consistency is the entire point of this doc.
 
+## Why this works
+
+Consistency buys: same quality every time, predictable results, nothing missed, faster processing (no re-deciding the format each time), better organization, and output that's clean enough to actually reuse (in an interview answer, a portfolio, a review). The system pays for itself the moment output needs to be trusted without re-checking it.
+
+## When to use this system
+
+Every time — not just for one-off "capture an idea" moments. Applies to: interview prep, organizing project ideas, clarifying vague goals, breaking down a complex problem, processing feedback, planning anything with more than one moving part. If it's a brain dump or something that needs breaking down, run it through this system rather than answering ad hoc.
+
 ## The Consistency Rules
 
 1. **Always use the same template** — every note follows `templates/idea-template.md`. No one-off formats.
 2. **Always use standard categories** — `work` / `personal` / `other`, nothing invented per note.
 3. **Always clarify ambiguous items** — when an idea is genuinely unclear, don't leave it guessed-and-unconfirmed, but don't interrogate either. Default to restating it back ("do you mean X?") so the user can correct in one word — this also helps them hear back what they actually said. Only ask an open question when a restatement isn't possible.
-4. **Always find connections** — auto-check every new idea against existing notes' tags/category for overlap or related items, in the background, without being asked. Surface it briefly if something relevant turns up; say nothing if it doesn't.
+4. **Always find connections, and dedupe** — auto-check every new idea against existing notes' tags/category for overlap, in the background, without being asked. If it's a genuine duplicate (not just related), fold it into the existing note instead of creating a new one — merge, don't multiply. If it's related but distinct, link them (see `## Related` convention) and say nothing unless something's actually relevant.
 5. **Always consolidate** — every note gets a row on the master list (`notes/master-list.md`) automatically at creation. No asking, no opt-in.
-6. **Always convert to tasks** — every idea gets a `Next Actions` checklist unless it's a pure reflection with nothing to do yet.
+6. **Always convert to tasks, in priority order** — every idea gets a `Next Actions` checklist unless it's a pure reflection with nothing to do yet. Within that list, the most important/urgent item goes first — don't leave tasks in whatever order they were mentioned if that's not the order they matter in.
 7. **Always show your work** — the reasoning (translation, connections, why this priority) lives in the note file, where it's useful. It does not belong in the chat reply — don't explain *why* something was organized a certain way in chat, just state the result.
 
 ## Note format
@@ -43,6 +51,19 @@ Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statement
 - When the user asks something like "what have I been asking about most," "quick review," or "monthly reflection," scan `notes/*.md` (frontmatter tags/category/priority, not full bodies) over the relevant time window and summarize the patterns — recurring tags, categories that dominate, ideas that stayed `new` too long.
 - Save the summary to `notes/reflections/YYYY-MM.md` (or a date range in the filename for ad-hoc reviews) so it's a running record, not a one-off chat answer.
 - This is derived from existing notes, not a separately hand-maintained log — don't duplicate bookkeeping.
+
+## Pre-save checklist
+
+Before saving a note (or presenting a brain dump's output), silently verify:
+- [ ] Same template used?
+- [ ] Items stated clearly (no leftover ambiguity)?
+- [ ] Connections to existing notes checked?
+- [ ] Duplicates merged, not re-created?
+- [ ] Tasks specific and doable, not vague?
+- [ ] Tasks in priority order?
+- [ ] Is the reasoning captured in the note itself (Rule 7)?
+
+This is a self-check, not something to show the user — if something fails, fix it before saving, don't narrate the check in chat.
 
 ## Reply behavior
 - Keep chat replies short (2-4 lines). Summarize, don't dump the file. Never explain the *why* behind formatting/organizing choices in chat (Rule 7) — that reasoning lives in the note.
