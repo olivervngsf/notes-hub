@@ -8,6 +8,8 @@ status: new
 
 # Make CRM more effective
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 A pop-up idea about how to make the CRM work more effectively — no details yet, just the itch to look into it.
 

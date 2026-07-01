@@ -8,6 +8,8 @@ status: new
 
 # Finish AI workflow
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 Want to finish the AI workflow thing first — top priority today over the other ideas floating around.
 

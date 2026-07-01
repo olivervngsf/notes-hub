@@ -8,6 +8,8 @@ status: new
 
 # Portfolio: add a "How I Work" section
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 Saw keithmillerdesign.com and loved how simple and easy to follow it is. Really liked the "How I Work" section, broken into 5 topics: Innovation, Execution, Design Decisions, Communication, Career Growth. Want that same structure on my own portfolio (vnguyen.design).
 

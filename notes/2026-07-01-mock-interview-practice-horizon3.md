@@ -8,6 +8,8 @@ status: in_progress
 
 # Practice mock interviews (Horizon3 scenarios)
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 This month's focus: practice mock interviews. Specifically want to break down and practice scenarios from the last interview with Horizon3's hiring manager.
 

@@ -8,6 +8,8 @@ status: new
 
 # Title
 
+**Master list:** [notes/master-list.md](master-list.md) *(only add this line once the note is actually on the master list)*
+
 ## Idea
 Raw idea, lightly cleaned up, kept close to the user's own words.
 

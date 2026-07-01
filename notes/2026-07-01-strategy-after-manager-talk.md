@@ -8,6 +8,8 @@ status: new
 
 # Strategy to move forward after manager talk
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 After talking with my manager, I keep thinking about a strategy for what's next — how to actually move forward from that conversation.
 

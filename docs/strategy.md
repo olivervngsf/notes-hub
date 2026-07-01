@@ -18,6 +18,7 @@ This is the layer underneath the notes. It defines *how* the capture system runs
 - Lives at `notes/master-list.md`. One row per captured idea: date, title, category, priority, tags, status, link to the note file.
 - Never auto-add a note to the master list. After capturing and summarizing an idea, ask the user once: "add this to the master list?" Only add on yes.
 - The master list is the recheck surface — it's what the user scans to see everything open, not the individual note files.
+- **Backlink**: when (and only when) a note is added to the master list, add a `**Master list:** [notes/master-list.md](master-list.md)` line directly under the title of that note. This makes travel bidirectional — master list → note (via the Note column) and note → master list (via this line). Notes never added to the master list don't get this line.
 
 ## Reflection / pattern review
 - When the user asks something like "what have I been asking about most," "quick review," or "monthly reflection," scan `notes/*.md` (frontmatter tags/category/priority, not full bodies) over the relevant time window and summarize the patterns — recurring tags, categories that dominate, ideas that stayed `new` too long.
