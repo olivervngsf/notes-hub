@@ -1,6 +1,8 @@
 ---
 date: 2026-07-01
 category: work
+priority: high
+tags: [ai, workflow]
 status: new
 ---
 

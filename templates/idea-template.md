@@ -1,6 +1,8 @@
 ---
 date: YYYY-MM-DD
 category: work | personal | other
+priority: high | medium | low
+tags: [tag-one, tag-two]
 status: new
 ---
 

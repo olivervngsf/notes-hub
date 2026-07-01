@@ -1,6 +1,6 @@
 ---
 name: capture-idea
-description: Capture a raw, messy idea from conversation and turn it into a short markdown note — plain-language translation plus next actions. Use whenever the user is thinking out loud, rambling, brainstorming, or says things like "capture this", "idea:", "random thought", or just drops an unstructured idea without asking for anything else.
+description: Capture a raw, messy idea from conversation and turn it into a short markdown note — plain-language translation plus next actions. Also handles prioritizing a brain dump ("what should I focus on today") and pattern reviews ("what have I been asking about most", "quick review"). Use whenever the user is thinking out loud, rambling, brainstorming, asking what to prioritize, or asking for a reflection/review of their captured ideas.
 ---
 
 # Capture Idea
@@ -11,12 +11,21 @@ Goal: let the user talk, not type. Turn a messy spoken idea into one short markd
 
 1. **Read the raw idea** as given — don't ask clarifying questions unless it's genuinely impossible to guess intent. Guessing wrong and fixing later is cheaper than an interrogation.
 2. **Guess the category**: `work`, `personal`, or `other`. Use context clues (mentions of job/team/product → work; mentions of health/family/hobbies → personal; everything else → other).
-3. **Write the translation**: 2–4 short sentences, plain words, the user's own voice/tone. This answers "what does this actually mean" — not a restatement, an interpretation.
-4. **Break it into next actions**: 2–5 concrete, doable checkbox items. Skip this section if the idea has no action yet (pure thought/reflection) — don't force actions that don't exist.
-5. **Capture every link verbatim** in a `## Links` section — any URL the user mentions, exact and labeled. Never leave this out; losing links is the #1 failure mode of this skill.
-6. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
-7. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. No preamble, no re-explaining what you just wrote.
-8. **Ask about the master list**: after the summary, ask once "add this to the master list?" Only add a row to `notes/master-list.md` if they say yes — never auto-add.
+3. **Set priority and tags**: `priority` (high/medium/low) from what the user says matters right now — if they just did a brain dump and named what's important today, that item is high, don't leave it at a stale default. `tags` are freeform and cross-cutting (can span categories) — use them, not category, when the user later asks what relates to what.
+4. **Write the translation**: 2–4 short sentences, plain words, the user's own voice/tone. This answers "what does this actually mean" — not a restatement, an interpretation.
+5. **Break it into next actions**: 2–5 concrete, doable checkbox items. Skip this section if the idea has no action yet (pure thought/reflection) — don't force actions that don't exist.
+6. **Capture every link verbatim** in a `## Links` section — any URL the user mentions, exact and labeled. Never leave this out; losing links is the #1 failure mode of this skill.
+7. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
+8. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. No preamble, no re-explaining what you just wrote.
+9. **Ask about the master list**: after the summary, ask once "add this to the master list?" Only add a row to `notes/master-list.md` if they say yes — never auto-add.
+
+## Prioritizing across a brain dump
+
+When the user drops several ideas and then says what matters most today, don't just file them evenly — set `priority` per idea based on what they said, and say back which one(s) you'd tackle first and why (stated urgency > time available > everything else). This is a judgment call each time, not a fixed rule.
+
+## Pattern review
+
+If the user asks what they've been asking about most, for a quick review, or a monthly reflection, see `docs/strategy.md` → "Reflection / pattern review": scan note frontmatter (tags/category/priority) across the time window, summarize the patterns, and save to `notes/reflections/YYYY-MM.md`.
 
 ## Rules
 

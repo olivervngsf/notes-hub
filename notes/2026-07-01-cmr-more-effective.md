@@ -1,6 +1,8 @@
 ---
 date: 2026-07-01
 category: work
+priority: medium
+tags: [crm, tooling]
 status: new
 ---
 
