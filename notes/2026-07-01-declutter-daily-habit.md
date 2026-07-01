@@ -8,6 +8,8 @@ status: new
 
 # Declutter — one real reset
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 Declutter the desk and the bathroom sink — a real, time-boxed reset — and turn it into a daily habit of tidy, clean, clear.
 

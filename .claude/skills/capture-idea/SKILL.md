@@ -17,8 +17,8 @@ Goal: let the user talk, not type. Turn a messy spoken idea into one short markd
 6. **Break it into next actions**: 2–5 concrete, doable checkbox items. Skip this section if the idea has no action yet (pure thought/reflection) — don't force actions that don't exist.
 7. **Capture every link verbatim** in a `## Links` section — any URL the user mentions, exact and labeled. Never leave this out; losing links is the #1 failure mode of this skill.
 8. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
-9. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. State the result, not the reasoning behind how it was organized — that reasoning lives in the note itself.
-10. **Ask about the master list**: after the summary, ask once "add this to the master list?" Only add a row to `notes/master-list.md` if they say yes — never auto-add. When you do add it, also add a `**Master list:** [notes/master-list.md](master-list.md)` backlink line under the note's title, so travel works both directions.
+9. **Add it to the master list automatically**: every note gets a row in `notes/master-list.md` at creation — no asking. Also add the `**Master list:** [notes/master-list.md](master-list.md)` backlink line under the note's title, so travel works both directions.
+10. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. State the result, not the reasoning behind how it was organized — that reasoning lives in the note itself.
 
 ## Prioritizing across a brain dump
 

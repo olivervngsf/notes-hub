@@ -12,7 +12,7 @@ Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statement
 2. **Always use standard categories** — `work` / `personal` / `other`, nothing invented per note.
 3. **Always clarify ambiguous items** — when an idea is genuinely unclear, don't leave it guessed-and-unconfirmed, but don't interrogate either. Default to restating it back ("do you mean X?") so the user can correct in one word — this also helps them hear back what they actually said. Only ask an open question when a restatement isn't possible.
 4. **Always find connections** — auto-check every new idea against existing notes' tags/category for overlap or related items, in the background, without being asked. Surface it briefly if something relevant turns up; say nothing if it doesn't.
-5. **Always consolidate** — every note that's added to the master list stays reflected there (`notes/master-list.md`), one row each, kept current.
+5. **Always consolidate** — every note gets a row on the master list (`notes/master-list.md`) automatically at creation. No asking, no opt-in.
 6. **Always convert to tasks** — every idea gets a `Next Actions` checklist unless it's a pure reflection with nothing to do yet.
 7. **Always show your work** — the reasoning (translation, connections, why this priority) lives in the note file, where it's useful. It does not belong in the chat reply — don't explain *why* something was organized a certain way in chat, just state the result.
 
@@ -30,9 +30,9 @@ Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statement
 
 ## Master list
 - Lives at `notes/master-list.md`. One row per captured idea: date, title, category, priority, tags, status, link to the note file.
-- Never auto-add a note to the master list. After capturing and summarizing an idea, ask the user once: "add this to the master list?" Only add on yes.
+- Every note gets added automatically at capture time — no asking, no confirmation needed. This is a change from the earlier version of this rule (which required an explicit yes each time).
 - The master list is the recheck surface — it's what the user scans to see everything open, not the individual note files.
-- **Backlink**: when (and only when) a note is added to the master list, add a `**Master list:** [notes/master-list.md](master-list.md)` line directly under the title of that note. This makes travel bidirectional — master list → note (via the Note column) and note → master list (via this line). Notes never added to the master list don't get this line.
+- **Backlink**: every note gets a `**Master list:** [notes/master-list.md](master-list.md)` line directly under its title, added at the same time as the master list row. This makes travel bidirectional — master list → note (via the Note column) and note → master list (via this line).
 
 ## Reflection / pattern review
 - When the user asks something like "what have I been asking about most," "quick review," or "monthly reflection," scan `notes/*.md` (frontmatter tags/category/priority, not full bodies) over the relevant time window and summarize the patterns — recurring tags, categories that dominate, ideas that stayed `new` too long.

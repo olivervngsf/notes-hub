@@ -8,6 +8,8 @@ status: new
 
 # AI: stakeholder feedback assistant
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 Build an AI that listens to all stakeholder considerations, feedback, and concerns, and surfaces the top 5 that matter most.
 

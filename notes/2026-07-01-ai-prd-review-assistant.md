@@ -8,6 +8,8 @@ status: new
 
 # AI: PRD review assistant
 
+**Master list:** [notes/master-list.md](master-list.md)
+
 ## Idea
 Build an AI that reviews a PRD — checks timeline, deadline, strategy, and business outcomes, and flags when any of those are missing.
 
