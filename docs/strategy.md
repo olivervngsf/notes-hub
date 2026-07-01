@@ -2,6 +2,20 @@
 
 This is the layer underneath the notes. It defines *how* the capture system runs, so behavior stays consistent across sessions. Not something you read day-to-day — reference it when a skill's behavior needs to change.
 
+## The problem this solves
+
+Brain dumps are messy: unstructured thoughts, duplicate ideas, unclear statements, missing connections, hard to turn into action. Without a system, processing an idea is inconsistent — different format, different quality, different result every time. With a system, it's consistent — same process, same format, predictable result every time. That consistency is the entire point of this doc.
+
+## The Consistency Rules
+
+1. **Always use the same template** — every note follows `templates/idea-template.md`. No one-off formats.
+2. **Always use standard categories** — `work` / `personal` / `other`, nothing invented per note.
+3. **Always clarify ambiguous items** — when an idea is genuinely unclear, don't leave it guessed-and-unconfirmed, but don't interrogate either. Default to restating it back ("do you mean X?") so the user can correct in one word — this also helps them hear back what they actually said. Only ask an open question when a restatement isn't possible.
+4. **Always find connections** — auto-check every new idea against existing notes' tags/category for overlap or related items, in the background, without being asked. Surface it briefly if something relevant turns up; say nothing if it doesn't.
+5. **Always consolidate** — every note that's added to the master list stays reflected there (`notes/master-list.md`), one row each, kept current.
+6. **Always convert to tasks** — every idea gets a `Next Actions` checklist unless it's a pure reflection with nothing to do yet.
+7. **Always show your work** — the reasoning (translation, connections, why this priority) lives in the note file, where it's useful. It does not belong in the chat reply — don't explain *why* something was organized a certain way in chat, just state the result.
+
 ## Note format
 - One idea = one file: `notes/YYYY-MM-DD-slug.md`.
 - Frontmatter: `date`, `category`, `priority` (high/medium/low), `tags` (freeform list), `status`.
@@ -12,7 +26,7 @@ This is the layer underneath the notes. It defines *how* the capture system runs
 ## Category vs. priority vs. tags
 - `category` (work/personal/other) is for filing only — never use it to decide what matters today.
 - `priority` is set from what the user says matters right now (explicit "I want to do X first/today"), not guessed from category. Re-set it whenever the user does a fresh brain dump and states what's important — don't leave stale priorities.
-- `tags` are the cross-cutting connective tissue — freeform, can span categories (e.g. `ai`, `career`, `crm`). Use tags, not category, to pull related ideas together when asked "what relates to X."
+- `tags` are the cross-cutting connective tissue — freeform, can span categories (e.g. `ai`, `career`, `crm`). Use tags, not category, to pull related ideas together, and to auto-check connections (Rule 4).
 
 ## Master list
 - Lives at `notes/master-list.md`. One row per captured idea: date, title, category, priority, tags, status, link to the note file.
@@ -26,6 +40,6 @@ This is the layer underneath the notes. It defines *how* the capture system runs
 - This is derived from existing notes, not a separately hand-maintained log — don't duplicate bookkeeping.
 
 ## Reply behavior
-- Keep chat replies short (2-4 lines). Summarize, don't dump the file.
-- Guess category and structure first; correct on feedback rather than asking upfront.
+- Keep chat replies short (2-4 lines). Summarize, don't dump the file. Never explain the *why* behind formatting/organizing choices in chat (Rule 7) — that reasoning lives in the note.
+- Guess category and structure first; when genuinely ambiguous, restate-and-confirm rather than open-ended questioning (Rule 3).
 - When the user gives feedback on the system itself (not an idea), treat it as a system change: update the template/skill/strategy files, don't just apply it once by hand.

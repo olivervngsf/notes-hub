@@ -9,28 +9,33 @@ Goal: let the user talk, not type. Turn a messy spoken idea into one short markd
 
 ## Steps
 
-1. **Read the raw idea** as given — don't ask clarifying questions unless it's genuinely impossible to guess intent. Guessing wrong and fixing later is cheaper than an interrogation.
+1. **Read the raw idea** as given. If it's ambiguous, don't interrogate — restate it back ("do you mean X?") so it's a one-word confirm/correct, not an open question. Only ask a real open question when a restatement isn't possible.
 2. **Guess the category**: `work`, `personal`, or `other`. Use context clues (mentions of job/team/product → work; mentions of health/family/hobbies → personal; everything else → other).
-3. **Set priority and tags**: `priority` (high/medium/low) from what the user says matters right now — if they just did a brain dump and named what's important today, that item is high, don't leave it at a stale default. `tags` are freeform and cross-cutting (can span categories) — use them, not category, when the user later asks what relates to what.
-4. **Write the translation**: 2–4 short sentences, plain words, the user's own voice/tone. This answers "what does this actually mean" — not a restatement, an interpretation.
-5. **Break it into next actions**: 2–5 concrete, doable checkbox items. Skip this section if the idea has no action yet (pure thought/reflection) — don't force actions that don't exist.
-6. **Capture every link verbatim** in a `## Links` section — any URL the user mentions, exact and labeled. Never leave this out; losing links is the #1 failure mode of this skill.
-7. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
-8. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. No preamble, no re-explaining what you just wrote.
-9. **Ask about the master list**: after the summary, ask once "add this to the master list?" Only add a row to `notes/master-list.md` if they say yes — never auto-add. When you do add it, also add a `**Master list:** [notes/master-list.md](master-list.md)` backlink line under the note's title, so travel works both directions.
+3. **Set priority and tags**: `priority` (high/medium/low) from what the user says matters right now — if they just did a brain dump and named what's important today, that item is high, don't leave it at a stale default. `tags` are freeform and cross-cutting (can span categories).
+4. **Auto-check for connections**: before writing, scan existing notes' tags/category for overlap with this idea — do this every time, without being asked. Mention it briefly in the reply only if something relevant turns up; say nothing if it doesn't.
+5. **Write the translation**: 2–4 short sentences, plain words, the user's own voice/tone. This answers "what does this actually mean" — not a restatement, an interpretation.
+6. **Break it into next actions**: 2–5 concrete, doable checkbox items. Skip this section if the idea has no action yet (pure thought/reflection) — don't force actions that don't exist.
+7. **Capture every link verbatim** in a `## Links` section — any URL the user mentions, exact and labeled. Never leave this out; losing links is the #1 failure mode of this skill.
+8. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
+9. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. State the result, not the reasoning behind how it was organized — that reasoning lives in the note itself.
+10. **Ask about the master list**: after the summary, ask once "add this to the master list?" Only add a row to `notes/master-list.md` if they say yes — never auto-add. When you do add it, also add a `**Master list:** [notes/master-list.md](master-list.md)` backlink line under the note's title, so travel works both directions.
 
 ## Prioritizing across a brain dump
 
-When the user drops several ideas and then says what matters most today, don't just file them evenly — set `priority` per idea based on what they said, and say back which one(s) you'd tackle first and why (stated urgency > time available > everything else). This is a judgment call each time, not a fixed rule.
+When the user drops several ideas and then says what matters most today, don't just file them evenly — set `priority` per idea based on what they said, and say back which one(s) you'd tackle first (stated urgency > time available > everything else). This is a judgment call each time, not a fixed rule.
 
 ## Pattern review
 
 If the user asks what they've been asking about most, for a quick review, or a monthly reflection, see `docs/strategy.md` → "Reflection / pattern review": scan note frontmatter (tags/category/priority) across the time window, summarize the patterns, and save to `notes/reflections/YYYY-MM.md`.
 
+## The Consistency Rules
+
+Full rationale in `docs/strategy.md` → "The Consistency Rules." Short version: same template, standard categories, clarify by restating (not interrogating), auto-find connections in the background, always consolidate into the master list, always convert to tasks, keep the reasoning in the note — not in chat.
+
 ## Rules
 
 - Keep every reply short. If the user wants more, they'll ask.
-- Don't dump the whole file back into chat — summarize.
+- Don't dump the whole file back into chat — summarize, and skip explaining formatting/organizing choices.
 - Don't ask "is this work or personal" — decide, and let them correct you if wrong.
 - One idea = one file. If they drop multiple ideas in one message, split into multiple files.
 - Underlying behavior rules live in `docs/strategy.md`. If the user gives feedback on how the system itself works (not on an idea), update the template/skill/strategy files — don't just patch the one note by hand.
