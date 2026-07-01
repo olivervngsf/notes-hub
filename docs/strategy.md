@@ -44,6 +44,7 @@ Every time — not just for one-off "capture an idea" moments. Applies to: inter
 ## Master list
 - Lives at `notes/master-list.md`. One row per captured idea: id, date, title, category, priority, tags, status, link to the note file.
 - Every note gets added automatically at capture time — no asking, no confirmation needed. This is a change from the earlier version of this rule (which required an explicit yes each time).
+- **Sort order**: high priority first, then medium, then low. Within the same priority, keep insertion order (oldest first). A new note gets inserted into its priority band, not appended to the bottom — and if a note's priority changes later, move its row to match.
 - The master list is the recheck surface — it's what the user scans to see everything open, not the individual note files.
 - **Backlink**: every note gets a `**Master list:** [notes/master-list.md](master-list.md)` line directly under its title, added at the same time as the master list row. This makes travel bidirectional — master list → note (via the Note column) and note → master list (via this line).
 
