@@ -15,3 +15,6 @@ Plain-language breakdown of what this idea actually means — 2-4 sentences.
 ## Next Actions
 - [ ] Action one
 - [ ] Action two
+
+## Links
+- Raw URL exactly as shared, with a short label

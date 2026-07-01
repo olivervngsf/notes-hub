@@ -13,8 +13,10 @@ Goal: let the user talk, not type. Turn a messy spoken idea into one short markd
 2. **Guess the category**: `work`, `personal`, or `other`. Use context clues (mentions of job/team/product → work; mentions of health/family/hobbies → personal; everything else → other).
 3. **Write the translation**: 2–4 short sentences, plain words, the user's own voice/tone. This answers "what does this actually mean" — not a restatement, an interpretation.
 4. **Break it into next actions**: 2–5 concrete, doable checkbox items. Skip this section if the idea has no action yet (pure thought/reflection) — don't force actions that don't exist.
-5. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
-6. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. No preamble, no re-explaining what you just wrote.
+5. **Capture every link verbatim** in a `## Links` section — any URL the user mentions, exact and labeled. Never leave this out; losing links is the #1 failure mode of this skill.
+6. **Save the note** to `notes/YYYY-MM-DD-slug.md` (slug = 3-6 words from the idea, kebab-case) using `templates/idea-template.md`.
+7. **Reply short**: 2-4 lines max. Give the translation + actions inline in chat (so the user doesn't have to open the file), then the file path. No preamble, no re-explaining what you just wrote.
+8. **Ask about the master list**: after the summary, ask once "add this to the master list?" Only add a row to `notes/master-list.md` if they say yes — never auto-add.
 
 ## Rules
 
@@ -22,3 +24,4 @@ Goal: let the user talk, not type. Turn a messy spoken idea into one short markd
 - Don't dump the whole file back into chat — summarize.
 - Don't ask "is this work or personal" — decide, and let them correct you if wrong.
 - One idea = one file. If they drop multiple ideas in one message, split into multiple files.
+- Underlying behavior rules live in `docs/strategy.md`. If the user gives feedback on how the system itself works (not on an idea), update the template/skill/strategy files — don't just patch the one note by hand.

@@ -16,3 +16,7 @@ You found a portfolio structure that clicked for you — not the visuals, the fr
 - [ ] Re-look at keithmillerdesign.com's "How I Work" section and note what makes each of the 5 topics work
 - [ ] Draft your own version of the 5 topics (Innovation, Execution, Design Decisions, Communication, Career Growth) using your real projects
 - [ ] Add the section to vnguyen.design
+
+## Links
+- Reference: https://www.keithmillerdesign.com/
+- My portfolio: https://vnguyen.design/
