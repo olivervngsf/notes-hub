@@ -25,3 +25,6 @@ This is your #1 today. Everything else on your mind is a "later" — this is the
 ## Related
 - [AI: PRD review assistant](2026-07-01-ai-prd-review-assistant.md)
 - [AI: stakeholder feedback assistant](2026-07-01-ai-stakeholder-feedback-assistant.md)
+
+## Links
+- AI workflows with Claude, Augment community: https://community.augment.org/c/ai-workflows-with-claude
